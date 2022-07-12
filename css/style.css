@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    position: relative;
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+
+    animation: pipe-animation 2s infinite linear; 
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -100px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.boneco{
+    position: absolute;
+    width: 50px;
+    bottom: 0;
+    animation: pular 1s
+}
+
+@keyframes pular {
+    0%{
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+
+}
